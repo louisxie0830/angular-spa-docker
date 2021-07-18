@@ -7,8 +7,7 @@ ARG DEPLOY_ENV=sit
 WORKDIR /app
 RUN apt-get update && apt-get install git python make build-essential -y
 
-RUN npm install -g node-gyp
-RUN npm i @angular/cli@11.1.4 -g
+RUN npm install -g node-pre-gyp node-gyp @angular/cli@11.1.4
 
 # Remove package-lock.json
 RUN rm -f package-lock.json
