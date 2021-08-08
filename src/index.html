@@ -9,5 +9,20 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    function blast() {
+      // do something
+    }
+    let num = 0;
+    var devtools = new Date();
+    devtools.toString = function() {
+        num++;
+        if (num > 1) {
+            window.location.href = 'http://127.0.0.1:4200/'
+            blast();
+        }
+    }
+    console.log('', devtools);
+  </script>
 </body>
 </html>
